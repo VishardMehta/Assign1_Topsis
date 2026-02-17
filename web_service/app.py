@@ -1,7 +1,11 @@
 from flask import Flask, request, render_template_string
 from flask_mail import Mail, Message
-from topsis_hitesh_102317248.topsis import topsis
+import sys
 import os
+# Add parent directory to path to find topsis_package
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from topsis_package.topsis_vishard_102317240.topsis import topsis
 
 app = Flask(__name__)
 
